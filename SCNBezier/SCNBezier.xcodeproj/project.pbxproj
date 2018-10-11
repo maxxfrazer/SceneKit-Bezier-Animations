@@ -10,6 +10,7 @@
 		AF65E103216C1FE80026D7A6 /* SCNBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF65E102216C1FE80026D7A6 /* SCNBezierPath.swift */; };
 		AF65E10A216C20220026D7A6 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF65E109216C20220026D7A6 /* SCNVector3+Extensions.swift */; };
 		AF65E10C216C205D0026D7A6 /* SCNAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF65E10B216C205D0026D7A6 /* SCNAction+Extensions.swift */; };
+		AF68236C216FE244002BEAE7 /* InterpolatorFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF68236B216FE244002BEAE7 /* InterpolatorFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		AF65E102216C1FE80026D7A6 /* SCNBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNBezierPath.swift; sourceTree = "<group>"; };
 		AF65E109216C20220026D7A6 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		AF65E10B216C205D0026D7A6 /* SCNAction+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNAction+Extensions.swift"; sourceTree = "<group>"; };
+		AF68236B216FE244002BEAE7 /* InterpolatorFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatorFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AF65E102216C1FE80026D7A6 /* SCNBezierPath.swift */,
+				AF68236B216FE244002BEAE7 /* InterpolatorFunctions.swift */,
 				AF65E109216C20220026D7A6 /* SCNVector3+Extensions.swift */,
 				AF65E10B216C205D0026D7A6 /* SCNAction+Extensions.swift */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				AF65E103216C1FE80026D7A6 /* SCNBezierPath.swift in Sources */,
 				AF65E10A216C20220026D7A6 /* SCNVector3+Extensions.swift in Sources */,
+				AF68236C216FE244002BEAE7 /* InterpolatorFunctions.swift in Sources */,
 				AF65E10C216C205D0026D7A6 /* SCNAction+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
