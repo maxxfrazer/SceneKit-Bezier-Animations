@@ -10,7 +10,7 @@ import Foundation
 
 public class InterpolatorFunctions {
 	public static func bounceOut(tIn: TimeInterval) -> TimeInterval {
-		var t = min(max(tIn,0),1)
+		var t = min(max(tIn, 0), 1)
 		if t < (1/2.75) {
 			return 7.5625*t*t
 		} else if t < (2/2.75) {
@@ -26,19 +26,19 @@ public class InterpolatorFunctions {
 	}
 
 	public static func easeInExpo(tIn: TimeInterval) -> TimeInterval {
-		let t = min(max(tIn,0),1)
-		return t == 0 ? 0 : pow(2, 10 * (t - 1));
+		let t = min(max(tIn, 0), 1)
+		return t == 0 ? 0 : pow(2, 10 * (t - 1))
 	}
 	public static func easeOutExpo(tIn: TimeInterval) -> TimeInterval {
-		let t = min(max(tIn,0),1)
-		return t == 1 ? 1 : (1 - pow(2, -10 * t));
+		let t = min(max(tIn, 0), 1)
+		return t == 1 ? 1 : (1 - pow(2, -10 * t))
 	}
 	public static func easeInOutExpo(tIn: TimeInterval) -> TimeInterval {
-		var t = min(max(tIn,0),1)
-		if (t==0 || t == 1) { return t }
+		var t = min(max(tIn, 0), 1)
+		if t==0 || t == 1 { return t }
 		t *= 2
-		if (t < 1) { return 1/2 * pow(2, 10 * (t - 1)) }
-		return 1/2 * (2 - pow(2, -10 * (t - 1)));
+		if t < 1 { return 1/2 * pow(2, 10 * (t - 1)) }
+		return 1/2 * (2 - pow(2, -10 * (t - 1)))
 	}
 
 }

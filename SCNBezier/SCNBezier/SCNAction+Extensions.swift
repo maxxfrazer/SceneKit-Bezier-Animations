@@ -9,14 +9,24 @@
 import SceneKit
 
 public extension SCNAction {
-	class func moveAlong(path: SCNBezierPath, duration: TimeInterval, fps: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil) -> SCNAction {
-		let actions = path.getNPoints(n: Int(duration) * fps, interpolator: interpolator).map { (point) -> SCNAction in
+	class func moveAlong(
+		path: SCNBezierPath, duration: TimeInterval, fps: Int,
+		interpolator: ((TimeInterval) -> TimeInterval)? = nil
+	) -> SCNAction {
+		let actions = path.getNPoints(count: Int(duration) * fps, interpolator: interpolator).map { (point) -> SCNAction in
 			let tInt = 1 / TimeInterval(fps)
 			return SCNAction.move(to: point, duration: tInt)
 		}
 		return SCNAction.sequence(actions)
 	}
-	class func moveAlong(bezier path: [SCNVector3], duration: TimeInterval, fps: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil) -> SCNAction {
-		return SCNAction.moveAlong(path: SCNBezierPath(points: path), duration: duration, fps: fps, interpolator: interpolator)
+	class func moveAlong(
+		bezier path: [SCNVector3], duration: TimeInterval,
+		fps: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil
+	) -> SCNAction {
+		return SCNAction.moveAlong(
+			path: SCNBezierPath(points: path),
+			duration: duration, fps: fps,
+			interpolator: interpolator
+		)
 	}
 }

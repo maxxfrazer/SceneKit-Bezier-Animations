@@ -28,10 +28,12 @@ public class SCNBezierPath {
 			return tmp
 		}
 	}
-	internal func getNPoints(n: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil) -> [SCNVector3] {
-		var bezPoints: Array<SCNVector3> = Array(repeating: SCNVector3Zero, count: n)
-		for time in 0..<n {
-			let tNow = TimeInterval(time) / TimeInterval(n - 1);
+	internal func getNPoints(
+		count: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil
+	) -> [SCNVector3] {
+		var bezPoints: [SCNVector3] = Array(repeating: SCNVector3Zero, count: count)
+		for time in 0..<count {
+			let tNow = TimeInterval(time) / TimeInterval(count - 1)
 			bezPoints[time] = self.posAt(
 				time: interpolator == nil ? tNow : interpolator!(tNow)
 			)

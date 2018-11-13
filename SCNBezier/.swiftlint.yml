@@ -1,0 +1,6 @@
+variable_name:
+  max_length:
+    warning: 45
+    error: 60
+  min_length:
+    warning: 1

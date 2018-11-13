@@ -6,7 +6,6 @@
 //  Copyright © 2018 Max Cobb. All rights reserved.
 //
 
-
 import SceneKit
 
 internal func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
@@ -18,4 +17,3 @@ internal func + (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
 internal func * (left: SCNVector3, right: Float) -> SCNVector3 {
 	return SCNVector3Make(left.x * right, left.y * right, left.z * right)
 }
-
