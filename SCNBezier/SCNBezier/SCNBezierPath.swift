@@ -13,22 +13,41 @@ public class SCNBezierPath {
 	public init(points: [SCNVector3]) {
 		self.points = points
 	}
-	internal func posAt(time: TimeInterval) -> SCNVector3 {
+	/// Get position along bezier curve at a given time
+	///
+	/// - Parameter time: Time as a percentage along bezier curve
+	/// - Returns: position on the bezier curve
+	public func posAt(time: TimeInterval) -> SCNVector3 {
+		guard let first = self.points.first, let last = self.points.last else {
+			print("NO POINTS IN SCNBezierPath")
+			return SCNVector3Zero
+		}
+		if time == 0 {
+			return first
+		} else if time == 1 {
+			return last
+		}
 		let t = Float(time)
-		if t == 0 {
-			return self.points.first!
-		} else if t == 1 {
-			return self.points.last!
+		var high = self.points.count
+		var current = 0
+		var rtn = self.points
+		while high > 0 {
+			while current < high - 1 {
+				rtn[current] = rtn[current] * (1 - t) + rtn[current + 1] * t
+				current += 1
+			}
+			high -= 1
+			current = 0
 		}
-		var tMult = pow(1 - t, Float(points.count - 1))
-		let itMult = t / (1 - t)
-		return self.points.reduce(SCNVector3Zero) { (res, next) -> SCNVector3 in
-			let tmp = res + (next * tMult)
-			tMult *= itMult
-			return tmp
-		}
+		return rtn.first!
 	}
-	internal func getNPoints(
+	/// Collection of points evenly separated along the bezier curve from beginning to end
+	///
+	/// - Parameters:
+	///   - count: how many points you want
+	///   - interpolator: time interpolator for easing
+	/// - Returns: array of "count" points the points on the bezier curve
+	public func getNPoints(
 		count: Int, interpolator: ((TimeInterval) -> TimeInterval)? = nil
 	) -> [SCNVector3] {
 		var bezPoints: [SCNVector3] = Array(repeating: SCNVector3Zero, count: count)
