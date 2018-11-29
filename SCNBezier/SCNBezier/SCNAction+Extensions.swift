@@ -27,7 +27,7 @@ public extension SCNAction {
 		}
 		return SCNAction.sequence(actions)
 	}
-	
+
 	/// Move along a Bezier Path represented by a list of SCNVector3
 	///
 	/// - Parameters:
