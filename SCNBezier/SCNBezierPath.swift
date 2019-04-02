@@ -27,13 +27,13 @@ public class SCNBezierPath {
 		} else if time == 1 {
 			return last
 		}
-		let t = Float(time)
+		let tFloat = Float(time)
 		var high = self.points.count
 		var current = 0
 		var rtn = self.points
 		while high > 0 {
 			while current < high - 1 {
-				rtn[current] = rtn[current] * (1 - t) + rtn[current + 1] * t
+				rtn[current] = rtn[current] * (1 - tFloat) + rtn[current + 1] * tFloat
 				current += 1
 			}
 			high -= 1

@@ -2,6 +2,12 @@
 
 I noticed that there was no nice way (to my knowledge) in SceneKit of animating a Node along a curved path.
 
+[![Version](https://img.shields.io/cocoapods/v/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
+[![License](https://img.shields.io/cocoapods/l/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
+[![Platform](https://img.shields.io/cocoapods/p/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
+[![Build Status](https://travis-ci.com/maxxfrazer/SceneKit-Bezier-Animations.svg?branch=master)](https://travis-ci.com/maxxfrazer/SceneKit-Bezier-Animations)
+
 Include this pod in your project:
 `pod 'SCNBezier'`
 

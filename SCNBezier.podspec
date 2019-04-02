@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "SCNBezier"
-  s.version      = "1.1.1"
+  s.version      = "1.2.0"
   s.summary      = "SCNBezier allows users to animate objects along 3D bézier curves."
   s.description  = <<-DESC
   					SCNBezier allows users to animate objects along bézier curves.
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.author             = "Max Cobb"
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source       = { :git => "https://github.com/maxxfrazer/SceneKit-Bezier-Animations.git", :tag => "#{s.version}" }
-  s.swift_version = '4.1'
+  s.swift_version = '5.0'
   s.ios.deployment_target = '11.0'
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source_files  = "SCNBezier/SCNBezier/*.swift"
