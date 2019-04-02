@@ -9,10 +9,7 @@ set -e
 SWIFTLINT_PKG_PATH="/tmp/SwiftLint.pkg"
 SWIFTLINT_PKG_URL="https://github.com/realm/SwiftLint/releases/download/0.31.0/SwiftLint.pkg"
 
-curl -s https://api.github.com/repos/realm/SwiftLint/releases/latest \
-| grep "browser_download_url.*pkg" \
-| cut -d : -f 2,3 | tr -d \" \
-| wget --output-document=$SWIFTLINT_PKG_PATH -qi -
+wget --output-document=$SWIFTLINT_PKG_PATH $SWIFTLINT_PKG_URL
 
 if [ -f $SWIFTLINT_PKG_PATH ]; then
   echo "SwiftLint package exists! Installing it..."
