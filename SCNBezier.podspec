@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.ios.deployment_target = '11.0'
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "SCNBezier/SCNBezier/*.swift"
+  s.source_files  = "SCNBezier/*.swift"
 end
