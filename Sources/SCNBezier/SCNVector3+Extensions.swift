@@ -8,12 +8,18 @@
 
 import SceneKit
 
+#if os(macOS)
+public typealias VectorVal = CGFloat
+#else
+public typealias VectorVal = Float
+#endif
+
 internal func - (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
 	return SCNVector3Make(left.x - right.x, left.y - right.y, left.z - right.z)
 }
 internal func + (left: SCNVector3, right: SCNVector3) -> SCNVector3 {
 	return SCNVector3Make(left.x + right.x, left.y + right.y, left.z + right.z)
 }
-internal func * (left: SCNVector3, right: Float) -> SCNVector3 {
+internal func * (left: SCNVector3, right: VectorVal) -> SCNVector3 {
 	return SCNVector3Make(left.x * right, left.y * right, left.z * right)
 }

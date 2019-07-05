@@ -27,7 +27,13 @@ public class SCNBezierPath {
 		} else if time == 1 {
 			return last
 		}
+
+		#if os(macOS)
+		let tFloat = CGFloat(time)
+		#else
 		let tFloat = Float(time)
+		#endif
+
 		var high = self.points.count
 		var current = 0
 		var rtn = self.points
