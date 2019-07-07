@@ -22,6 +22,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 *.xcodeproj
+!SCNBezier-Example.xcodeproj
 
 ## Obj-C/Swift specific
 *.hmap
