@@ -21,6 +21,8 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.xcodeproj
+!SCNBezier-Example.xcodeproj
 
 ## Obj-C/Swift specific
 *.hmap
@@ -39,6 +41,7 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
+.swiftpm/
 
 # CocoaPods
 #
