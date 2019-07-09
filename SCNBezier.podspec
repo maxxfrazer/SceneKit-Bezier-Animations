@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.homepage      = 'https://github.com/maxxfrazer/SceneKit-Bezier-Animations'
   s.license       = 'MIT'
   s.author        = 'Max Cobb'
-  s.source        = { :git => 'https://github.com/maxxfrazer/SceneKit-Bezier-Animations.git', :tag => '#{s.version}' }
+  s.source        = { :git => 'https://github.com/maxxfrazer/SceneKit-Bezier-Animations.git', :tag => "#{s.version}" }
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
