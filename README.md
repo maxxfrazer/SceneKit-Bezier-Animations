@@ -2,12 +2,12 @@
 
 Animate a SCNNode along a curved path in SceneKit.
 
-[![License](https://img.shields.io/cocoapods/l/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
-[![Platform](https://img.shields.io/cocoapods/p/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
-[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-v1.3.0-orange.svg?style=flat)](https://github.com/apple/swift-package-manager)
-[![Version](https://img.shields.io/cocoapods/v/SCNBezier.svg)](https://cocoapods.org/pods/SCNBezier)
-[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
-[![Build Status](https://travis-ci.com/maxxfrazer/SceneKit-Bezier-Animations.svg?branch=master)](https://travis-ci.com/maxxfrazer/SceneKit-Bezier-Animations)
+[![License](https://img.shields.io/github/license/maxxfrazer/SceneKit-Bezier-Animations?color=lightgray)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/blob/master/LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/SCNBezier)](https://cocoapods.org/pods/SCNBezier)
+[![SwiftPM](https://img.shields.io/github/v/release/maxxfrazer/SceneKit-Bezier-Animations?color=orange&include_prereleases)](https://github.com/apple/swift-package-manager)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org/)
+[![Linter Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/linter/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
+[![Build Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/build/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
 
 --------
 ## Installation
