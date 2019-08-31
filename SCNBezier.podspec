@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name          = 'SCNBezier'
-  s.version       = '1.3.0'
+  s.version       = '1.3.1'
   s.summary       = 'SCNBezier allows users to animate objects along 3D bézier curves.'
   s.description   = <<-DESC
   					SCNBezier allows users to animate objects along bézier curves.

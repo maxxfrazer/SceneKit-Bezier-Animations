@@ -2,12 +2,14 @@
 
 Animate a SCNNode along a curved path in SceneKit.
 
+
+[![Linter Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/linter/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
+[![Build Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/build/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
+
 [![License](https://img.shields.io/github/license/maxxfrazer/SceneKit-Bezier-Animations?color=lightgray)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/SCNBezier)](https://cocoapods.org/pods/SCNBezier)
 [![SwiftPM](https://img.shields.io/github/v/release/maxxfrazer/SceneKit-Bezier-Animations?color=orange&include_prereleases)](https://github.com/apple/swift-package-manager)
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org/)
-[![Linter Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/linter/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
-[![Build Status](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/workflows/build/badge.svg)](https://github.com/maxxfrazer/SceneKit-Bezier-Animations/actions)
 
 --------
 ## Installation
