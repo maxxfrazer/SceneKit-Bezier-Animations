@@ -21,7 +21,7 @@ public extension SCNAction {
 		path: SCNBezierPath, duration: TimeInterval, fps: Int = 30,
 		interpolator: ((TimeInterval) -> TimeInterval)? = nil
 	) -> SCNAction {
-		let actions = path.getNPoints(count: Int(duration) * fps, interpolator: interpolator).map { (point) -> SCNAction in
+		let actions = path.getNPoints(count: Int(duration * Double(fps)), interpolator: interpolator).map { (point) -> SCNAction in
 			let tInt = 1 / TimeInterval(fps)
 			return SCNAction.move(to: point, duration: tInt)
 		}
