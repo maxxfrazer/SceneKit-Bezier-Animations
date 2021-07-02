@@ -17,15 +17,36 @@ public extension SCNAction {
 	///   - fps: how frequent the position should be updated (default 30)
 	///   - interpolator: time interpolator for easing
 	/// - Returns: SCNAction to be applied to a node
-	class func moveAlong(
+	static func moveAlong(
 		path: SCNBezierPath, duration: TimeInterval, fps: Int = 30,
 		interpolator: ((TimeInterval) -> TimeInterval)? = nil
 	) -> SCNAction {
-		let actions = path.getNPoints(count: Int(duration) * fps, interpolator: interpolator).map { (point) -> SCNAction in
-			let tInt = 1 / TimeInterval(fps)
-			return SCNAction.move(to: point, duration: tInt)
-		}
+		let actions = SCNAction.getActions(
+			path: path, duration: duration, fps: fps,
+			interpolator: interpolator
+		)
 		return SCNAction.sequence(actions)
+	}
+
+	internal static func getActions(
+		path: SCNBezierPath, duration: TimeInterval, fps: Int = 30,
+		interpolator: ((TimeInterval) -> TimeInterval)? = nil
+	) -> [SCNAction] {
+		let nPoints = path.getNPoints(
+			count: max(2, Int(ceil(duration * Double(fps)))), interpolator: interpolator
+		)
+		let actions = nPoints.enumerated().map { (iterator) -> SCNAction in
+			if iterator.offset == 0 {
+				// The first action should be instant, making sure the
+				// SCNNode is in the starting position
+				return SCNAction.move(to: iterator.element, duration: 0)
+			}
+			// The duration of each actuion should be a fraction of the full duration
+			// n points, n - 1 moving actions, so duration / (n - 1)
+			let tInt = duration / Double(nPoints.count - 1)
+			return SCNAction.move(to: iterator.element, duration: tInt)
+		}
+		return actions
 	}
 
 	/// Move along a Bezier Path represented by a list of SCNVector3
