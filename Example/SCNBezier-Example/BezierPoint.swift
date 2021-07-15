@@ -7,7 +7,7 @@
 //
 
 import SceneKit
-//import SCNBezier
+// import SCNBezier
 
 extension Array where Element: BezierPoint {
 	func getBezierPath() -> SCNBezierPath {

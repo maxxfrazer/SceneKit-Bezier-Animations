@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import SCNBezier
 import SceneKit
@@ -14,7 +13,7 @@ internal func * (left: SCNVector3, right: VectorVal) -> SCNVector3 {
 }
 
 internal extension SCNVector3 {
-	var length_squared: Float {
+	var lengthSquared: Float {
 		Float(sqrt(x * x + y * y + z * z))
 	}
 }
@@ -27,13 +26,13 @@ final class SCNBezierTests: XCTestCase {
 			SCNVector3(1.0, -1, 0.1),
 			SCNVector3(0.4, -0.5, 0.01)
 		]
-		
+
 		let points = SCNBezierPath(points: bezPositions).getNPoints(count: 100)
 		XCTAssertTrue(points.count == 100, "Wrong number of points: \(bezPositions.count)")
 		checkPositionsEqual(bezPositions.first!, points.first!)
 		checkPositionsEqual(bezPositions.last!, points.last!)
 	}
-	
+
 	func testUnevenValue() throws {
 		let bezPositions = [
 			SCNVector3(-1, 1, 0.01),
@@ -49,9 +48,9 @@ final class SCNBezierTests: XCTestCase {
 		XCTAssertTrue(actions.first!.duration == 0, "Action sequence wrong length: \(actions.first!.duration)")
 		XCTAssertTrue(actions.last!.duration == 0.3, "Action sequence wrong length: \(actions.last!.duration)")
 	}
-	
+
 	func checkPositionsEqual(_ first: SCNVector3, _ second: SCNVector3, prependMessage: String = "") {
-		let endDiff = (first - second).length_squared
+		let endDiff = (first - second).lengthSquared
 		XCTAssertTrue(endDiff < 1e-5, "\(prependMessage)\nLast point is not correct \(first) vs \(second)")
 	}
 }

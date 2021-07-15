@@ -1,4 +1,4 @@
-name: linter
+name: swiftlint
 
 on: push
 
@@ -6,8 +6,7 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
     - name: swiftlint
-      run: |
-        ./install_swiftlint.sh
-        swiftlint
+      uses: norio-nomura/action-swiftlint@3.2.1
+      with:
+        args: --strict
